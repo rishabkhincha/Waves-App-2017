@@ -19,6 +19,7 @@ import java.util.List;
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
     private List<EventItem> listItems;
     private Context context;
+    private LinearLayout rootView;
 
 
     public EventAdapter(List<EventItem> moviesList, Context context) {
@@ -41,9 +42,20 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "hello"+listItem.getHead(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context, Events.class);
+                context.startActivity(intent);
             }
         });
+        if(position % 2 == 0)
+        {
+            //holder.rootView.setBackgroundColor(Color.BLACK);
+            holder.linearLayout.setBackgroundResource(R.color.black);
+        }
+        else
+        {
+            //holder.rootView.setBackgroundColor(Color.WHITE);
+            holder.linearLayout.setBackgroundResource(R.color.white);
+        }
     }
 
     @Override
@@ -58,6 +70,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
+
             head = (TextView)itemView.findViewById(R.id.heading);
             desc = (TextView)itemView.findViewById(R.id.desc);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.linear_lay);

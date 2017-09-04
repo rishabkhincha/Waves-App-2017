@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.bits_waves.waves2017">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +24,8 @@
         <activity android:name=".ItemFourFragment" />
         <activity android:name=".ItemFiveFragment" />
         <activity android:name=".OurTeam" />
-        <activity android:name=".RegActivity"></activity>
+        <activity android:name=".RegActivity" />
+        <activity android:name=".Events"></activity>
     </application>
 
 </manifest>

@@ -30,7 +30,7 @@
             android:background="@color/colorPrimary"
             android:minHeight="55dp"
             android:minWidth="55dp"
-            app:srcCompat="@drawable/ic_account_box_black_24dp" />
+            app:srcCompat="@drawable/ic_team" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -48,7 +48,7 @@
             android:background="@color/colorPrimary"
             android:minHeight="55dp"
             android:minWidth="55dp"
-            app:srcCompat="@drawable/ic_account_circle_black_24dp" />
+            app:srcCompat="@drawable/ic_pen" />
 
     </FrameLayout>
 
