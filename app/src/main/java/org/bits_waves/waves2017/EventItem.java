@@ -7,10 +7,11 @@ package org.bits_waves.waves2017;
 public class EventItem {
     private String head;
     private String desc;
-
-    public EventItem(String head, String desc) {
+    private String imageUrl;
+    public EventItem(String head, String desc, String imageUrl) {
         this.head = head;
         this.desc = desc;
+        this.imageUrl = imageUrl;
     }
 
     public String getHead() {
@@ -27,5 +28,13 @@ public class EventItem {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

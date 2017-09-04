@@ -6,9 +6,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -39,6 +42,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         final EventItem listItem = listItems.get(position);
         holder.head.setText(listItem.getHead());
         holder.desc.setText(listItem.getDesc());
+        Picasso.with(context).load(listItem.getImageUrl()).fit().into(holder.imgViewIcon);
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,12 +71,14 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         public TextView head;
         public TextView desc;
         public LinearLayout linearLayout;
+        public ImageView imgViewIcon;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             head = (TextView)itemView.findViewById(R.id.heading);
             desc = (TextView)itemView.findViewById(R.id.desc);
+            imgViewIcon = (ImageView) itemView.findViewById(R.id.imageView2);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.linear_lay);
         }
     }

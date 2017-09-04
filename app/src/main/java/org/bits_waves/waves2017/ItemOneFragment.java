@@ -1,6 +1,8 @@
 package org.bits_waves.waves2017;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,11 +13,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ItemOneFragment extends Fragment {
     private View myFragmentView;
+    private String imgURL;
+    private int bitIMG;
     public static ItemOneFragment newInstance() {
         ItemOneFragment fragment = new ItemOneFragment();
         return fragment;
@@ -27,8 +35,6 @@ public class ItemOneFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
 
     }
 
@@ -47,16 +53,16 @@ public class ItemOneFragment extends Fragment {
         adapter = new EventAdapter(listItems,getActivity().getApplicationContext());
 
         recyclerView.setAdapter(adapter);
+
         for (int i = 0; i <= 10; i++) {
             EventItem listItem = new EventItem(
                     "heading " + (i+1),
-                    "Hello"
+                    "Hello","https://www.w3schools.com/css/trolltunga.jpg"
             );
             listItems.add(listItem);
         }
         return myFragmentView;
 
     }
-
 
 }
