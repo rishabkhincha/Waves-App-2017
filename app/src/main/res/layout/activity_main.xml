@@ -14,13 +14,15 @@
         android:layout_alignParentTop="true"
         android:animateLayoutChanges="true">
 
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" />
+            android:theme="?attr/actionBarTheme">
+        </android.support.v7.widget.Toolbar>
 
         <ImageButton
             android:id="@+id/ourTeam"
@@ -49,13 +51,24 @@
             android:minHeight="55dp"
             android:minWidth="55dp"
             app:srcCompat="@drawable/ic_pen" />
+        <View android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/drop_shadow"/>
 
     </FrameLayout>
 
+<View
+    android:layout_width="match_parent"
+    android:layout_height="3dp"
+   android:layout_alignParentBottom="true"
+    android:layout_marginBottom="56dp"
+    android:background="@drawable/up_shadow"/>
+    />
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
         app:itemIconTint="@color/nav_item_state_list"
