@@ -1,6 +1,7 @@
 package org.bits_waves.waves2017;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,8 +21,9 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     private Context context;
 
 
-    public EventAdapter(List<EventItem> moviesList) {
+    public EventAdapter(List<EventItem> moviesList, Context context) {
         this.listItems = moviesList;
+        this.context = context;
     }
 
     @Override

@@ -44,7 +44,7 @@ public class ItemOneFragment extends Fragment {
         listItems = new ArrayList<>();
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        adapter = new EventAdapter(listItems);
+        adapter = new EventAdapter(listItems,getActivity().getApplicationContext());
 
         recyclerView.setAdapter(adapter);
         for (int i = 0; i <= 10; i++) {
