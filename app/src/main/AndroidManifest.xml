@@ -18,14 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ItemOneFragment" />
-        <activity android:name=".ItemTwoFragment" />
-        <activity android:name=".ItemThreeFragment" />
-        <activity android:name=".ItemFourFragment" />
-        <activity android:name=".ItemFiveFragment" />
+
         <activity android:name=".OurTeam" />
         <activity android:name=".RegActivity" />
-        <activity android:name=".Events"></activity>
+        <activity android:name=".Events" />
+
     </application>
 
 </manifest>
