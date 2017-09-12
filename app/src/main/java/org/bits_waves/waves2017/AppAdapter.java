@@ -2,6 +2,7 @@ package org.bits_waves.waves2017;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,14 +16,17 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import static android.R.attr.onClick;
+
 /**
- * Created by aryan on 3/9/17.
+ * Created by keshav on 10/9/17.
  */
 
 public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
     private List<AppItem> listItems;
     private Context context;
-  //  private LinearLayout rootView;
+    private String str;
+
 
 
     public AppAdapter(List<AppItem> listItems, Context context) {
@@ -43,26 +47,22 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
         holder.name.setText(listItem.getName());
         holder.email.setText(listItem.getEmail());
         holder.number.setText(listItem.getNumber());
+        str=holder.number.getText().toString();
+        holder.number.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(context,"number",Toast.LENGTH_LONG).show();
+                //String str=holder.number.getText().toString();
+                Intent it=new Intent(Intent.ACTION_DIAL);
+                it.setData(Uri.parse("tel:"+str));
+                context.startActivity(it);
+
+
+            }
+        });
 
         Picasso.with(context).load(listItem.getImageUrl()).fit().into(holder.imgViewIcon);
-//        Picasso.with(context).load(listItem.getImageUrl()).fit().into(holder.imgViewIcon);
-//        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(context, Events.class);
-//                context.startActivity(intent);
-//            }
-//        });
-//        if(position % 2 == 0)
-//        {
-//            //holder.rootView.setBackgroundColor(Color.BLACK);
-//            holder.linearLayout.setBackgroundResource(R.color.black);
-//        }
-//        else
-//        {
-//            //holder.rootView.setBackgroundColor(Color.WHITE);
-//            holder.linearLayout.setBackgroundResource(R.color.white);
-//        }
+
     }
 
     @Override
@@ -83,8 +83,9 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
             name = (TextView)itemView.findViewById(R.id.name);
             email = (TextView)itemView.findViewById(R.id.email);
             number = (TextView)itemView.findViewById(R.id.number);
+
             imgViewIcon = (ImageView) itemView.findViewById(R.id.imageView3);
-        //    linearLayout = (LinearLayout) itemView.findViewById(R.id.linear_lay);
+
         }
     }
 }

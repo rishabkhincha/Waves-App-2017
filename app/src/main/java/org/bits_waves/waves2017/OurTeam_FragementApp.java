@@ -47,11 +47,15 @@ public class OurTeam_FragementApp extends android.support.v4.app.Fragment{
         AppItem appItem2 =new AppItem("Aryan","7218406202", "shanumittal147@gmail.com","https://www.w3schools.com/css/trolltunga.jpg");
         AppItem appItem3 =new AppItem("Keshv","7218406202", "shanumittal147@gmail.com","https://www.w3schools.com/css/trolltunga.jpg");
         AppItem appItem4 =new AppItem("Keshav","7218406202", "shanumittal147@gmail.com","https://www.w3schools.com/css/trolltunga.jpg");
+        AppItem appItem5 =new AppItem("Keshav","7218406202", "shanumittal147@gmail.com","https://www.w3schools.com/css/trolltunga.jpg");
+        AppItem appItem6 =new AppItem("Keshav","7218406202", "shanumittal147@gmail.com","https://www.w3schools.com/css/trolltunga.jpg");
 
         appItems.add(appItem1);
         appItems.add(appItem2);
         appItems.add(appItem3);
         appItems.add(appItem4);
+        appItems.add(appItem5);
+        appItems.add(appItem6);
 
         adapter = new AppAdapter(appItems,getActivity().getApplicationContext());
         recyclerView.setAdapter(adapter);

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="org.bits_waves.waves2017.OurTeam_FragementWaves">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/our_team_fragement_waves_recycler_view"
+        xmlns:android="http://schemas.android.com/apk/res/android"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

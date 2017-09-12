@@ -14,7 +14,7 @@ public class AppItem {
         this.name = name;
         this.email = email;
         this.number=number;
-        this.imageUrl=getImageUrl();
+        this.imageUrl=imageUrl;
     }
 
     public String getName(){

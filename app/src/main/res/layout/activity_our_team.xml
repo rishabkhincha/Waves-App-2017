@@ -8,93 +8,6 @@
     tools:context="org.bits_waves.waves2017.OurTeam"
     android:id="@+id/testing123">
 
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar2"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="?attr/colorPrimary"-->
-        <!--android:minHeight="?attr/actionBarSize"-->
-        <!--android:theme="?attr/actionBarTheme"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent" />-->
-
-    <!--<android.support.constraint.Guideline-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/guideline"-->
-        <!--app:layout_constraintGuide_begin="20dp"-->
-        <!--android:orientation="horizontal"-->
-        <!--tools:layout_editor_absoluteY="20dp"-->
-        <!--tools:layout_editor_absoluteX="0dp" />-->
-
-    <!--<android.support.design.widget.TabLayout-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:padding="0dp"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/toolbar2"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--android:id="@+id/tabLayout">-->
-
-        <!--&lt;!&ndash;<android.support.design.widget.TabItem&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:text="App"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:id="@+id/ourTeam_AppFragement"&ndash;&gt;-->
-            <!--&lt;!&ndash;/>&ndash;&gt;-->
-
-        <!--&lt;!&ndash;<android.support.design.widget.TabItem&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:text="Waves" />&ndash;&gt;-->
-
-        <!--&lt;!&ndash;<android.support.design.widget.TabItem&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:text="Sponsors" />&ndash;&gt;-->
-    <!--</android.support.design.widget.TabLayout>-->
-
-    <!--<android.support.v4.view.ViewPager-->
-        <!--android:id="@+id/container2"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
-       <!--/>-->
-
-
-    <!--<ImageButton-->
-        <!--android:id="@+id/backit"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="?android:attr/actionModeCloseDrawable"-->
-        <!--tools:layout_editor_absoluteY="0dp"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:minWidth="56dp"-->
-        <!--android:minHeight="56dp"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--/>-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/textView3"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--android:layout_marginRight="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:text="Our Team"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/tabLayout"-->
-        <!--app:layout_constraintLeft_toLeftOf="@+id/backit"-->
-        <!--app:layout_constraintRight_toRightOf="@+id/toolbar2"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginEnd="8dp" />-->
-
-<!--</android.support.constraint.ConstraintLayout>-->
-
-
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -137,7 +50,7 @@
         <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
 
     <ImageButton
-    android:id="@+id/backit"
+    android:id="@+id/bye"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:srcCompat="?android:attr/actionModeCloseDrawable"
