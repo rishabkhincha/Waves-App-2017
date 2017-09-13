@@ -15,7 +15,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public ImageButton ourTeam, regBut;
+
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,26 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
-        ourTeam = (ImageButton) findViewById(R.id.ourTeam);
-        regBut = (ImageButton) findViewById(R.id.regBut);
 
-        ourTeam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OurTeam.class);
-                startActivity(intent);
-                overridePendingTransition(R.transition.enter, R.transition.exit);
-
-            }
-        });
-        regBut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RegActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.transition.left_to_right, R.transition.right_to_left);
-            }
-        });
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
