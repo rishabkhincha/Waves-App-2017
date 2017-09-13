@@ -55,10 +55,10 @@ public class ItemOneFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         for (int i = 0; i <= 10; i++) {
-            EventItem listItem = new EventItem(
-                    "heading " + (i+1),
+            EventItem listItem = new EventItem("lisng " + (i+1),
                     "Hello","https://www.w3schools.com/css/trolltunga.jpg"
             );
+
             listItems.add(listItem);
         }
         return myFragmentView;
